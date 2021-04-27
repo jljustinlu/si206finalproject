@@ -91,7 +91,7 @@ def make_graph_ages(cur, con):
     plt.scatter(x, y)
     plt.ylabel("Age")
     plt.xlabel("Name")
-    plt.title("Ages by Most Popular Names in the United States from 1920-2019")
+    plt.title("Ages of Most Popular Names in the United States from 1920-2019")
     plt.show()
 
 
@@ -172,12 +172,12 @@ def make_graph_activities(cur, con):
     plt.show()
 
 def main():
-    #activities = get_activities()
-    #names = get_names()
-    #ages = get_ages(names)
+    activities = get_activities()
+    names = get_names()
+    ages = get_ages(names)
     cur, con = set_database("data.db")
-    #write_database_ages(ages, cur, con)
-    #write_database_activities(activities, cur, con)
+    write_database_ages(ages, cur, con)
+    write_database_activities(activities, cur, con)
     calculate_average_age(cur, con)
     calculate_average_price(cur, con)
     calculate_average_accessibility(cur, con)
